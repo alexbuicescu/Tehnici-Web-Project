@@ -1,1 +1,0 @@
-$( "#site-header" ).load( "../html/header.html" );

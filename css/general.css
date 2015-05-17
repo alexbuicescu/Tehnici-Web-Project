@@ -1,5 +1,7 @@
 .site-body {
     width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
 	background-color: #f5f5f5;
@@ -37,7 +39,7 @@ nav {
 nav ul {
 }
 
-nav li {
+nav li, li {
     list-style: none;
     display: inline-block;
     margin: 0px;
@@ -79,7 +81,7 @@ nav header{
     text-decoration: none;
     position: absolute;
     color: black;
-    top:25%;
+    top:0%;
     right: 20px;
 }
 
@@ -122,10 +124,9 @@ nav ul li:hover > ul {
 	height: 3em;
 }
 
-.article-message, .article-title {
+.article, .article-message, .article-title {
 	clear: both;
 	width: 50%;
-	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	color: #2f2f2f;
@@ -154,4 +155,24 @@ nav ul li:hover > ul {
 	margin-top: 100px;
 	display: block;
 	resize: none;
+}
+
+#comment-container-list {
+	margin: 0px;
+}
+#comment-container {
+	background-color: #FFD187;
+	border: 1px solid #777777;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+}
+.comment-text {
+	color: black;
+	text-align: left;
+}
+.comment-date {
+	color: #6F6F6F;
+	font-size: 15px;
+	text-align: left;
 }

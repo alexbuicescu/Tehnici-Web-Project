@@ -39,11 +39,11 @@ function createComment(commentId, currentIndex) {
 
 function populateComment(currentIndex)
 {
-	var message = document.getElementById('comment-text');
-	setMessageText(message, currentIndex);
-
 	var date = document.getElementById('comment-date');
 	setMessageDate(date, currentIndex);
+
+	var message = document.getElementById('comment-text');
+	setMessageText(message, currentIndex);
 }
 
 function setMessageText(commentText, currentIndex) {
@@ -51,8 +51,9 @@ function setMessageText(commentText, currentIndex) {
 	var commentTextArea = document.getElementById('comment');
 
 	commentText.setAttribute('id', 'comment-text' + currentIndex);
-	commentText.innerHTML = commentTextArea.value;
+	commentText.innerHTML = commentTextArea.value.replace(/(\n)+/g, '<br />');
 	commentTextArea.value = '';
+	commentText.setAttribute('class', 'comment-text');
 }
 
 function setMessageDate(commentDate, currentIndex) {
@@ -61,6 +62,7 @@ function setMessageDate(commentDate, currentIndex) {
 	d.getMinutes();
 	d.getSeconds();
 
-	commentDate.innerHTML = d.getHours() + ':' + d.getMinutes();
+	commentDate.innerHTML = 'Posted by Anonymus at: ' + d.getHours() + ':' + d.getMinutes();
 	commentDate.setAttribute('id', 'comment-date' + currentIndex);
+	commentDate.setAttribute('class', 'comment-date');
 }

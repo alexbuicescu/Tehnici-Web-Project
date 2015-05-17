@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<link rel="stylesheet" type="text/css" href="../css/general.css">
-
 	<head>
 		<meta charset="UTF-8">
 		<title>PC World</title>
 	</head>
 
 	<body class="site-body">
-		<nav id="site-navbar"></nav>
 
-		<div id="site-footer"></div>
+		<div class="article" id="contact-title" style="margin-top:100px">Leave your messages here :)</div>
 
-	<div id="contact-title" style="margin-top:100px">Leave your messages here :)</div>
-	<div><ul id="comment-container-list"></ul></div>
-	
-	<div>
-		<textarea rows="7" name="comment" id="comment" placeholder="Comment"></textarea>
-	</div>
-	
-	<div>
-		<input onclick="addComment()" id="submit" type="submit" name="submit" value="Add Comment">
-	</div>
+		<div class="article"><ul id="comment-container-list"></ul></div>
+		
+		<div class="article"><textarea rows="7" name="comment" id="comment" placeholder="Comment" style="width: 100%;"></textarea></div>
+		
+		<div class="article"><input onclick="addComment()" id="submit" type="submit" name="submit" value="Add Comment"></div>
 
-	<script src="../javascript/insert_comment.js"></script>
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$( "#site-navbar" ).load( "../html/header.html" );
-			});
-		</script>
-		<script>
-			$(document).ready(function(){
-				$( "#site-footer" ).load( "../html/footer.html" );
-			});
-		</script>
 	</body>
+
+	<nav id="site-navbar"></nav>
+	<footer id="site-footer"></footer>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="../javascript/include_navbar.js"></script>
+	<script src="../javascript/include_footer.js"></script>
+	<script src="../javascript/insert_comment.js"></script>
+		
 </html>
