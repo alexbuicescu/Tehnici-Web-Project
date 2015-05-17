@@ -1,5 +1,40 @@
-<body>
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="../css/general.css">
 
-	<div>A computer is a general-purpose device that can be programmed to carry out a set of arithmetic or logical operations automatically. Since a sequence of operations can be readily changed, the computer can solve more than one kind of problem.</div>
+	<head>
+		<meta charset="UTF-8">
+		<title>PC World</title>
+	</head>
 
-</body>
+	<body class="site-body">
+		<nav id="site-navbar"></nav>
+
+		<div id="site-footer"></div>
+
+	<div id="contact-title" style="margin-top:100px">Leave your messages here :)</div>
+	<div><ul id="comment-container-list"></ul></div>
+	
+	<div>
+		<textarea rows="7" name="comment" id="comment" placeholder="Comment"></textarea>
+	</div>
+	
+	<div>
+		<input onclick="addComment()" id="submit" type="submit" name="submit" value="Add Comment">
+	</div>
+
+	<script src="../javascript/insert_comment.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$( "#site-navbar" ).load( "../html/header.html" );
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+				$( "#site-footer" ).load( "../html/footer.html" );
+			});
+		</script>
+	</body>
+</html>

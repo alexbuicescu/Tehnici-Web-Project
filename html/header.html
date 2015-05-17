@@ -1,0 +1,38 @@
+<ul class="site-menu-navigation-list">
+
+    <li><header>PC World</header></li>
+	
+	<li> <a class="site-menu-navigation-list-item" href="../html/index.html">Home</a> </li>
+	<li id="components" style="position: relative;"> <a class="site-menu-navigation-list-item" href="#" >Components</a> 
+
+		<ul style="position: absolute; left:-40px;"id="book">
+
+			<li> <a href="../html/memory.html">Memory</a> </li>
+			<li> <a href="../html/cpu.html">CPU</a> </li>
+			<li> <a href="../html/contact.html">History</a> </li>
+
+		</ul>
+	</li>
+
+	<li> <a class="site-menu-navigation-list-item" href="../html/about.html">About</a> </li>
+	<li> <a class="site-menu-navigation-list-item" href="../html/contact.html">Contact</a> </li>
+
+</ul>
+
+<script>
+	$("#components").on({
+	    mouseenter: function () {
+	        //stuff to do on mouse enter
+			$( "#book" ).slideDown( "medium", function() {
+			// Animation complete.
+			});
+	    },
+	    mouseleave: function () {
+	        //stuff to do on mouse leave
+			$( "#book" ).slideUp( "medium", function() {
+			// Animation complete.
+			});
+	    }
+	});
+
+</script>
